@@ -91,4 +91,5 @@ run `npm run build:production`
 
 ## Running unit tests
 
-Run `npm run test:watch` to execute the all unit tests by jest and watch changin of code or you can generate coverage report by `npm run test:coverage`
+Run `npm run test:watch` to execute the all unit tests by jest and watch changin of code or you can generate coverage report by `npm run test:coverage` too.
+.
