@@ -5,6 +5,7 @@ import * as fromActions from '../store/actions';
 import * as fromReducers from '../store/reducers';
 
 import { Observable } from 'rxjs/Observable';
+import { ResultCellComponent } from '../components/result-cell/result-cell.component';
 
 @Component({
   selector: 'git-hunt',

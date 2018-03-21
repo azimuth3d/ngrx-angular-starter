@@ -37,7 +37,7 @@ export class SearchEffects {
             map((result: fromSearch.SearchResults) => {
               return new actions.GetSearchReposSuccess(result);
             }),
-            catchError(error => of(new actions.GetSearchReposFailed()))
+            catchError(error => of(new actions.GetSearchReposFailed(error)))
           );
       })
     );

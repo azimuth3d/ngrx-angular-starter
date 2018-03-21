@@ -2,3 +2,12 @@
   margin: 50px auto;
   width: 30vw;
 }
+
+.search-result {
+  margin: 50px auto;
+  width: 90vw;
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw 10vw;
+}

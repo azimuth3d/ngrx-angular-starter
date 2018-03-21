@@ -8,7 +8,8 @@ import {
 @Component({
   selector: 'search-box',
   template: `<input type="text" (keyup)="inputSearch($event.target.value)"
-                name="search" placeholder="search"/>`,
+                name="search" placeholder="search"/> 
+                <ng-content></ng-content>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [`input { padding: 10px; font-size: 1.4rem }`]
 })

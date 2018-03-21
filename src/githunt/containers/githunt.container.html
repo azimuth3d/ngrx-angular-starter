@@ -1,16 +1,12 @@
 <div class="search">
+    <h2> Githunt ( Github repo search ) </h2>
     <search-box (changeSearchTerm)="applySearch($event)">
+        <div style="padding: 20px 0;">
+            <span> Total result: {{ ( searchResults | async )?.total_count }} </span>
+        </div>
     </search-box>
-    <div>
-        <span> Total result: {{ ( searchResults | async )?.total_count }} </span>
-    </div>
+</div>
 
-    <div *ngFor="let result of resultItems | async">
-        <div> ID: {{ result?.id }} </div>
-        <div> name: {{ result?.name }} </div>
-        <div> full_name: {{ result?.id }} </div>
-        <div> private: {{ result?.private }} </div>
-        <div> watchers: {{ result?.watchers }} </div>
-        <div> scores: {{ result?.score }} </div>
-    </div>
+<div class="search-result">
+    <result-cell [result]="result" *ngFor="let result of resultItems | async"></result-cell>
 </div>

@@ -1,3 +1,18 @@
-<mat-card>
-
-</mat-card>
+<span class="card-wrap">
+    <mat-card>
+        <mat-card-header>
+        </mat-card-header>
+        <mat-card-content>
+            <div>
+                <b>Github id: </b> {{ result.id}} </div>
+            <div>
+                <b> Repo name:</b> {{ result.name }}</div>
+            <div>
+                <b> private: </b> {{ result?.private }} </div>
+            <div>
+                <b> watchers: </b> {{ result?.watchers }} </div>
+            <div>
+                <b> scores: </b> {{ result?.score }} </div>
+        </mat-card-content>
+    </mat-card>
+</span>
