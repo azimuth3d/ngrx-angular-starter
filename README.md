@@ -1,27 +1,94 @@
 # ImnoexAngularStarter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
+## description
+
+This starter ahs build for imnoex co.,ltd frontend reactive angualr application
+
+### Reactive Archectiture
+
+![Reactive Architecture](http://res.cloudinary.com/dquj9ig39/image/upload/v1521599707/ReactiveArch_cmsi14.png)
+
+All we need in ecosystem are
+
+* NGRX store ( https://github.com/ngrx/platform)
+* Unit testing with jest (https://facebook.github.io/jest/)
+* Reactive Extension Rxjs (http://reactivex.io/rxjs/)
+
+### Store , Reducer and Effect diagram
+
+![Store Effect](http://res.cloudinary.com/dquj9ig39/image/upload/v1521599709/StoreEffect_h2ro1i.png)
+
+## folder structure
+
+```bash
+├── e2e                                     //end to end test code
+│ ├── app.e2e-spec.ts
+│ ├── app.po.ts  
+├── src
+│
+│ ├── assets                                  // assets folder
+│ ├── config
+│ ├── environments
+│ │ ├── environment.prod.ts
+│ │ └── environment.ts
+│ ├── favicon.ico
+│ ├── githunt                                 // feature module  folder
+│ │ ├── components                            // reactive component (render only)
+│ │ │ ├── result-cell
+│ │ │ │ ├── result-cell.component.html
+│ │ │ │ ├── result-cell.component.scss
+│ │ │ │ └── result-cell.component.ts
+│ │ │ └── search-box
+│ │ │ └── search-box.component.ts
+│ │ ├── configs                           // save all config
+│ │ │ └── index.ts
+│ │ ├── containers                        // Container  working with store and pass value to each component
+│ │ │ ├── githunt.container.html
+│ │ │ ├── githunt.container.scss
+│ │ │ └── githunt.container.ts
+│ │ ├── githunt.module.ts                // Feature module for container container and all nesscessary module
+│ │ ├── models
+│ │ │ └── index.ts
+| | |--- store                          // store  folder  contain reducer ,effect and  action
+│ │ └── reducers
+│ │ └── index.ts
+│ ├── index.html
+│ ├── main                              //  main application module ()
+│ │ ├── actions
+│ │ │ └── index.ts
+│ │ ├── configs
+│ │ │ └── index.ts
+│ │ ├── containers
+│ │ │ └── app
+│ │ │ ├── app.component.html
+│ │ │ ├── app.component.scss
+│ │ │ └── app.component.ts
+│ │ ├── main.module.ts
+│ │ └── reducers
+│ │ └── index.ts
+│ ├── main.ts
+│ ├── polyfills.ts
+│ ├── setup-jest.ts                         // setup for jest
+│ ├── shared                                //  shared module for application scope
+│ │ └── custom-material.module.ts
+│ ├── styles.scss
+│ ├── test.ts
+│ ├── theme.scss
+│ ├── tsconfig.app.json
+│ ├── tsconfig.spec.json
+│ └── typings.d.ts
+├── tsconfig.json
+├── tslint.json
+```
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Build for production
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+run `npm run build:production`
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `npm run test:watch` to execute the all unit tests by jest and watch changin of code or you can generate coverage report by `npm run test:coverage`

@@ -1,0 +1,16 @@
+<div class="search">
+    <search-box (changeSearchTerm)="applySearch($event)">
+    </search-box>
+    <div>
+        <span> Total result: {{ ( searchResults | async )?.total_count }} </span>
+    </div>
+
+    <div *ngFor="let result of resultItems | async">
+        <div> ID: {{ result?.id }} </div>
+        <div> name: {{ result?.name }} </div>
+        <div> full_name: {{ result?.id }} </div>
+        <div> private: {{ result?.private }} </div>
+        <div> watchers: {{ result?.watchers }} </div>
+        <div> scores: {{ result?.score }} </div>
+    </div>
+</div>
